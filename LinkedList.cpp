@@ -6,7 +6,7 @@ public:
 	List();
 	void insert (int pos, T value);
 	int get_size();
-	void remuve (int pos);
+	void remove (int pos);
 	int find (T value);
 	void print ();
 
@@ -34,7 +34,7 @@ int main() {
 	lst.insert(2, 45);
 	lst.insert(0, 5);
 	lst.insert(3, 7);
-	lst.remuve(2);
+	lst.remove(2);
 	lst.print();
 	std::cout << std::endl;
 	std::cout << lst.find(35) << std::endl;
@@ -72,7 +72,7 @@ void List<T>::insert(int pos, T value) {
 }
 
 template <typename T>
-void List<T>::remuve(int pos) {
+void List<T>::remove(int pos) {
 	if (0 == pos) {
 		Node* tmp = m_head;
 		m_head = m_head->next;
